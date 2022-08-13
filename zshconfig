@@ -1,0 +1,5 @@
+# Requierd for gpg support on commits
+export GPG_TTY="$(tty)"
+
+
+source ~/dotfiles/zsh/alias.zsh
