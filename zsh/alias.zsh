@@ -30,3 +30,5 @@ alias ls="command ls ${colorflag}"
 alias gms='git commit -S -m'
 alias pok='python ok --local'
 alias pdoc='python -m doctest -v'
+
+alias gpgsign='echo "test" | gpg --sign'
