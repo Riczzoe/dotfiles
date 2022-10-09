@@ -4,6 +4,9 @@ pushd ~
 echo "Installing tmux"
 sudo apt install tmux
 
+echo "Installing emacs"
+sudo apt install emacs
+
 echo "Installing TPM"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 

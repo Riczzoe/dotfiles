@@ -32,3 +32,4 @@ alias pok='python ok --local'
 alias pdoc='python -m doctest -v'
 
 alias gpgsign='echo "test" | gpg --sign'
+alias emacs='emacs -nw'
