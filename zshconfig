@@ -1,5 +1,5 @@
 # Requierd for gpg support on commits
 export GPG_TTY=$(tty)
 
-
+source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 source ~/dotfiles/zsh/alias.zsh

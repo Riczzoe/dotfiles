@@ -16,16 +16,16 @@ alias p="cd ~/projects"
 alias g="git"
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+alias l="ls -lF --color=auto"
 
 # List all files colorized in long format, excluding . and ..
-alias la="ls -lAF ${colorflag}"
+alias la="ls -lAF --color=auto"
 
 # List only directories
-alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
+alias lsd="ls -lF --color=auto | grep --color=never '^d'"
 
 # Always use color output for `ls`
-alias ls="command ls ${colorflag}"
+alias ls="command ls --color=auto"
 
 alias gms='git commit -S -m'
 alias pok='python ok --local'

@@ -36,3 +36,6 @@ ln -fs ~/dotfiles/.vimrc ~/.vimrc
 ln -fs ~/dotfiles/.vim ~/.vim
 ln -fs ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+
+echo "Check if the environment is WSL"
+source ~/dotfiles/check_env.sh

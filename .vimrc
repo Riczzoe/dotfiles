@@ -96,6 +96,17 @@ set splitright
 "---------------------
 
 
+"---------------------
+" Plugin key
+"---------------------
+
+
+" NERDTree
+"=====================
+" open NERDTree
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 
 "---------------------
 " Plugin configuration
@@ -105,5 +116,6 @@ set splitright
 call plug#begin('~/.vim/plugged')
 
 Plug 'cormacrelf/vim-colors-github'
+Plug 'preservim/nerdtree'
 
 call plug#end()
