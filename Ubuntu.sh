@@ -32,7 +32,11 @@ echo "source ~/dotfiles/zshconfig" >> ~/.zshrc
 
 
 echo "Setting up dotfiles"
-ln -fs ~/dotfiles/.vimrc ~/.vimrc
+if [ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
+    ln -fs ~/dotfiles/.vim/.wsl_vimrc ~/.vimrc
+else
+    ln -fs ~/dotfiles/.vim/.normal_vimrc ~/.vimrc
+fi
 ln -fs ~/dotfiles/.vim ~/.vim
 ln -fs ~/dotfiles/.tmux.conf ~/.tmux.conf
 

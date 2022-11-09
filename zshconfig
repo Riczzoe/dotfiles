@@ -1,5 +1,7 @@
 # Requierd for gpg support on commits
 export GPG_TTY=$(tty)
 
+    export DISPLAY="$(/sbin/ip route | awk '/default/ { print $3 }'):0.0"
+
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 source ~/dotfiles/zsh/alias.zsh
