@@ -1,7 +1,7 @@
 " not vi compatible
 set nocompatible 
 
-
+hi Pmenu        ctermfg=white ctermbg=black gui=NONE guifg=white guibg=black
 
 "------------------
 " Syntax and indent
@@ -13,7 +13,6 @@ syntax on
 set showmatch 
 " set to force 256 colors
 set t_Co=256
-"colorscheme github
 " enable file type detection
 filetype plugin indent on
 set autoindent
@@ -87,11 +86,11 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 vnoremap <C-S-C> "+y
-
+inoremap {<CR> {<CR>}<Esc>ko
+nnoremap z i<BS><Esc>l
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-
 
 "---------------------
 " Fix problem
@@ -110,6 +109,15 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" C/C++
+" =====================
+" in normal mode F2 will save the file
+nmap <F2> :w<CR>
+" in insert mode F2 will exit insert, save, enters insert again
+imap <F2> <ESC>:w<CR>i
+" switch between header/source with F4
+map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+
 "---------------------
 " Plugin configuration
 "---------------------
@@ -117,7 +125,29 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'cormacrelf/vim-colors-github'
 Plug 'preservim/nerdtree'
+Plug 'tomtom/tcomment_vim'
+" Plug 'tpope/vim-commentary'
+"Plug 'preservim/nerdcommenter'
+Plug 'bfrg/vim-cpp-modern'
+Plug 'cormacrelf/vim-colors-github'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 
 call plug#end()
+
+"----------------------
+"Plugin config
+"----------------------
+
+colorscheme github
+
+" vim-cpp-modern
+" ====================
+" Enable highlighting of C++11 attributes
+let g:cpp_attributes_highlight = 1
+" Highlight struct/class member variables (affects both C and C++ files)
+let g:cpp_member_highlight = 1
+" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
+" (affects both C and C++ files)
+let g:cpp_simple_highlight = 1
