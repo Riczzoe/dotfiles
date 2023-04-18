@@ -23,7 +23,7 @@ fi
 echo "Installing zprezto"
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 echo "Init zprezto"
-zsh ~/.dotfiles/zprezto/init-zprezto.sh
+zsh ~/dotfiles/zprezto/init-zprezto.sh
 echo "change zprezto config"
 ln -fs ~/dotfiles/zprezto/prompt_sorin_setup ~/.zprezto/modules/prompt/functions/prompt_sorin_setup
 ln -fs ~/dotfiles/zprezto/.zpreztorc ~/.zpreztorc
