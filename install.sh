@@ -14,6 +14,11 @@ echo "Installing vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+echo "Installing bat"
+sudo apt install bat
+mkdir ~/.config/bat
+ln -s dotfiles/bat/config ~/.config/bat/config
+
 if [ -d ~/.Oh-my-zsh ]; then
     echo "Uninstalling oh_my_zsh"
     zsh
@@ -31,12 +36,7 @@ echo "Setting zsh"
 echo "source ~/dotfiles/zshconfig" >> ~/.zshrc
 
 
-echo "Setting up dotfiles"
-if [ -f "/proc/sys/fs/binfmt_misc/WSLInterop" ]; then
-    ln -fs ~/dotfiles/.vim/.wsl_vimrc ~/.vimrc
-else
-    ln -fs ~/dotfiles/.vim/.normal_vimrc ~/.vimrc
-fi
+ln -fs ~/dotfiles/.vim/.normal_vimrc ~/.vimrc
 ln -fs ~/dotfiles/.vim ~/.vim
 ln -fs ~/dotfiles/.tmux.conf ~/.tmux.conf
 
