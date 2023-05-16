@@ -1,6 +1,11 @@
 echo "Switching to home dir"
 pushd ~
 
+echo "Configuring git"
+git config --global core.editor "vim"
+git config --global user.name "JohnFrankz"
+git config --global user.email "86246881+JohnFrankz@users.noreply.github.com"
+
 echo "Installing tmux"
 sudo apt install tmux
 
