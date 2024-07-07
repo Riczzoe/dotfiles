@@ -12,12 +12,12 @@ Plug 'github/copilot.vim'
 " Plug 'tpope/vim-obsession'
 " Plug 'hardhackerlabs/theme-vim', { 'as': 'hardhacker' }
 " Plug 'cormacrelf/vim-colors-github'
-Plug 'andreypopp/vim-colors-plain'
-Plug 'owickstrom/vim-colors-paramount'
+" Plug 'andreypopp/vim-colors-plain'
+" Plug 'owickstrom/vim-colors-paramount'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+" Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'lervag/vimtex'
-Plug 'ianding1/leetcode.vim'
+" Plug 'ianding1/leetcode.vim'
 
 call plug#end()
