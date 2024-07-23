@@ -1,5 +1,5 @@
 # config zsh
-bash ./shell-tools/zsh/config_zprezto.sh
+zsh ./shell-tools/zsh/config_zprezto.sh
 
 if [ ! -f ~/.zshrc ]; then
     touch ~/.zshrc
@@ -16,6 +16,7 @@ ln -fs $(pwd)/shell-tools/vim/settings ~/.vim/settings
 ln -fs $(pwd)/shell-tools/vim/keymap ~/.vim/keymap
 ln -fs $(pwd)/shell-tools/vim/plugconfig ~/.vim/plugconfig
 ln -fs $(pwd)/shell-tools/vim/vimrc ~/.vimrc
+ln -fs $(pwd)/shell-tools/vim/gvimrc ~/.gvimrc
 
 # config tmux
 ln -fs $(pwd)/shell-tools/tmux/tmux.conf ~/.tmux.conf

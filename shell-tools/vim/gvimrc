@@ -1,0 +1,9 @@
+" Toggle Menu and Toolbar
+set guioptions-=m
+set guioptions-=T
+set guioptions-=l
+set guioptions-=r
+
+set guifont=IBM\ Plex\ Mono\ 16
+
+source ~/.vimrc
