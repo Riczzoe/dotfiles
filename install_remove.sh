@@ -8,6 +8,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+mkdir -p ~/.miniconda3\
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/.miniconda3/miniconda.sh\
+bash ~/.miniconda3/miniconda.sh -b -u -p ~/.miniconda3\
+trash ~/.miniconda3/miniconda.sh\
+~/.miniconda3/bin/conda init bash\
+
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
