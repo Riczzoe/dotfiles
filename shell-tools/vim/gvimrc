@@ -6,4 +6,5 @@ set guioptions-=r
 
 set guifont=IBM\ Plex\ Mono\ 16
 
+let $PATH = '/home/riczzoe/.miniforge/bin:' . $PATH
 source ~/.vimrc
