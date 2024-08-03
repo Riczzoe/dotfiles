@@ -6,9 +6,11 @@ if [ ! -f ~/.zshrc ]; then
 fi
 
 echo "source $(pwd)/shell-tools/zsh/alias.zsh" >> ~/.zshrc
+echo "source $(pwd)/shell-tools/zsh/functions.zsh" >> ~/.zshrc
 echo "source $(pwd)/shell-tools/zsh/exports.zsh" >> ~/.zshrc
-echo "source $(pwd)/shell-tools/zsh/nvm.zsh" >> ~/.zshrc
+echo "source $(pwd)/shell-tools/zsh/node.zsh" >> ~/.zshrc
 echo "source $(pwd)/shell-tools/zsh/conda.zsh" >> ~/.zshrc
+
 
 ln -fs $(pwd)/shell-tools/zsh/zpreztorc ~/.zpreztorc
 
