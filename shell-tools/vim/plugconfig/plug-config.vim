@@ -75,7 +75,9 @@ let g:vimtex_compiler_latexmk_engines = {
             \ 'lualatex'         : '-lualatex',
             \ 'xelatex'          : '-xelatex',
             \}
-let g:vimtex_quickfix_mode=2
+let g:vimtex_quickfix_mode=1
+let g:vimtex_fold_enabled=1
+let g:vimtex_quickfix_open_on_warning=0
 
 " vim Leetcode
 " -----------------------------------------------

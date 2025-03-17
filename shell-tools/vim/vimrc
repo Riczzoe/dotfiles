@@ -3,5 +3,5 @@ source $HOME/.vim/settings/function.vim
 source $HOME/.vim/settings/command.vim
 source $HOME/.vim/keymap/custom.vim
 source $HOME/.vim/plugconfig/plug.vim
-source $HOME/.vim/plugconfig/plug-config.vim
 source $HOME/.vim/plugconfig/plug-key.vim
+source $HOME/.vim/plugconfig/plug-config.vim

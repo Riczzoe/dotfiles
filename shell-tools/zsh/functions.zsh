@@ -23,7 +23,7 @@ gettd() {
     # duration=$(find "$directory" -name "*.mp4" -print0 | xargs -0 -P "$(nproc)" -I{} sh -c 'ffprobe -v error -select_streams v -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "$1" 2>/dev/null' -- {} | awk '{total += $1} END {print int(total)}')
 
     # get total duration of all mp4 files in the directory by using mediainfo.
-    duration=$(find "$directory" -name "*.mp4" -print0 | xargs -0 -P "$(nproc)" -I{} sh -c 'mediainfo --Output="General;%Duration%" "$1"' -- {} | awk '{total += $1} END {print int(total/1000)}')
+    duration=$(find "$directory" \( -name "*.mp4" -o -name "*.flv" \) -print0 | xargs -0 -P "$(nproc)" -I{} sh -c 'mediainfo --Output="General;%Duration%" "$1"' -- {} | awk '{total += $1} END {print int(total/1000)}')
     
     hours=$((duration / 3600))
     minutes=$((duration % 3600 / 60))
@@ -42,7 +42,7 @@ listtd() {
     # 获取第一个参数作为目标文件夹路径，如果没有参数则使用当前文件夹
     target_folder="${1:-.}"
     
-    find "$target_folder" -type f -iname "*.mp4" | sort -V | while read -r file; do
+    find "$target_folder" -type f \( -iname "*.mp4" -o -iname "*.flv" \) | sort -V | while read -r file; do
         # 使用 mediainfo 获取视频文件时长
         duration=$(mediainfo --Inform="Video;%Duration%" "$file")
 

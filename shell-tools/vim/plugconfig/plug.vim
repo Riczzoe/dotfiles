@@ -9,5 +9,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'lervag/vimtex'
 Plug 'bfrg/vim-cpp-modern'
+Plug 'craigemery/vim-autotag'
 
 call plug#end()

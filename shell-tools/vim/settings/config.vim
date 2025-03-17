@@ -45,7 +45,7 @@ set smartcase
 " enable mouse mode (scrolling, selection, etc)
 set mouse=a
 " disable folding by default
-set nofoldenable
+" set nofoldenable
 set clipboard=unnamed,unnamedplus
 " open new split panes to right and bottom, which feels more natural
 set splitbelow
